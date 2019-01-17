@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue test</title>
+</head>
+<style>
+    .active{
+        background-color: #99991F;
+    }
+    .like{background-color: deeppink;}
+</style>
+<body>
+<p>v-model</p>
+<div id="model">
+    <div>
+        <input type="text" v-model="name">
+        <span v-if="name">你的名字是:{{name}}</span>
+    </div>
+    <div>
+        <input type="text" v-model="age">
+        <span v-if="age">你的年龄是:{{age}}</span>
+    </div>
+    <div>
+        <input type="text" v-model="sex">
+        <span v-if="sex">你的性别是:{{sex}}</span>
+    </div>
+</div>
+<hr>
+<p>v-for</p>
+<div id="for">
+    <ul>
+        <li v-for="arr in array">{{arr.name}} ￥{{arr.price}}</li>
+    </ul>
+</div>
+<hr>
+<p>v-bind</p>
+<div id="vbind" :class="{active:isActive}">
+    <a v-bind:href="url">点击</a>
+</div>
+<hr>
+<p>组件</p>
+<div id="component">
+    <temp></temp>
+</div>
+
+
+
+<!--<script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>-->
+<script src="public/js/vue.js"></script>
+<script src="public/js/main.js"></script>
+</body>
+</html>
